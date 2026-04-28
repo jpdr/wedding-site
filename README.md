@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wedding Site
 
-## Getting Started
+A personal wedding RSVP site built with Next.js 15, Tailwind, and Neon Postgres.
 
-First, run the development server:
+## What this is
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Public landing page (hero, our story, details, RSVP form)
+- Server-action backed RSVP submission persisted to Neon
+- Password-protected `/admin` dashboard listing all RSVPs
+- Single Next.js App Router project — no separate API server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Copy the example env file and fill in your values:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   cp .env.local.example .env.local
+   ```
 
-## Learn More
+2. Install dependencies and start the dev server:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Open [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Required environment variables
 
-## Deploy on Vercel
+| Var | What it is |
+| --- | --- |
+| `DATABASE_URL` | Neon Postgres connection string (with `?sslmode=require`). |
+| `ADMIN_PASSWORD` | Password for `/admin/login`. |
+| `SESSION_SECRET` | 32+ char random hex used to sign the admin session cookie. Generate with `openssl rand -hex 32`. |
+| `NEXT_PUBLIC_VENUE_MAP_EMBED` | Optional. Google Maps embed iframe `src` URL. Leave empty to show a placeholder. |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Database setup (Neon)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a free project at [neon.tech](https://neon.tech).
+2. Copy the pooled connection string from the dashboard and paste it as `DATABASE_URL` in `.env.local`.
+3. Open the **SQL Editor** in Neon and run the contents of `db/schema.sql`. This creates the `rsvp` table and an index on `created_at`.
+
+## Deploying to Vercel
+
+1. Push this repo to GitHub.
+2. In Vercel, **Add New Project** → import the repository.
+3. Add the four environment variables (`DATABASE_URL`, `ADMIN_PASSWORD`, `SESSION_SECRET`, `NEXT_PUBLIC_VENUE_MAP_EMBED`) under **Project Settings → Environment Variables** for the Production environment.
+4. Deploy. The build does not need any of the env vars set — the DB client and session secret lazy-init at request time.
+
+## Filling in your wedding details
+
+All copy lives in `lib/wedding-config.ts`. Edit:
+
+- `coupleNames.partner1` / `partner2`
+- `weddingDate` (ISO 8601 with timezone offset)
+- `venue.name` / `venue.address`
+- `schedule` items
+- `dressCode`
+- `story.headline` / `story.body`
+- `rsvpDeadline`
+
+Drop hero / story photos into `public/photos/` as `hero.jpg` and `story.jpg` (or update the paths in the config).
+
+## Admin dashboard
+
+- Visit `/admin/login` and enter `ADMIN_PASSWORD`.
+- Session lasts 7 days; sign out from the dashboard header.
+- Direct GETs to `/admin` redirect to login if you don't have a valid session cookie.
+
+## Tech stack
+
+- Next.js 16 (App Router) + React 19
+- TypeScript
+- Tailwind CSS v4
+- `@neondatabase/serverless` for Postgres
+- `zod` for validation
+- HMAC-signed session cookie (custom, no NextAuth)
+- `next/font/google` — Cormorant Garamond (headings) + Inter (body)
