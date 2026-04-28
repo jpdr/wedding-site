@@ -22,7 +22,7 @@ export default function RsvpForm() {
   const deadline = formatDeadline(weddingConfig.rsvpDeadline);
   const [name, setName] = useState('');
   const [attending, setAttending] = useState<Attending>('');
-  const [guestCount, setGuestCount] = useState<1 | 2>(1);
+  const [guestCount, setGuestCount] = useState<1 | 2 | 3>(1);
   const [message, setMessage] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState<{ name: string; attending: boolean } | null>(null);
@@ -154,12 +154,18 @@ export default function RsvpForm() {
                 <select
                   id="rsvp-guests"
                   value={guestCount}
-                  onChange={(e) => setGuestCount(Number(e.target.value) as 1 | 2)}
+                  onChange={(e) =>
+                    setGuestCount(Number(e.target.value) as 1 | 2 | 3)
+                  }
                   className="mt-2 w-full rounded-xl border border-turquoise-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors focus:border-turquoise-500 focus:ring-2 focus:ring-turquoise-200"
                 >
-                  <option value={1}>Just me</option>
-                  <option value={2}>Me and a guest (2)</option>
+                  <option value={1}>Just me (1)</option>
+                  <option value={2}>Me +1 (2)</option>
+                  <option value={3}>Me +2 (3)</option>
                 </select>
+                <p className="mt-2 text-xs text-slate-500">
+                  Total people including yourself
+                </p>
               </div>
             )}
 
