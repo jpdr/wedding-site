@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Playfair_Display, Great_Vibes, The_Nautigal } from 'next/font/google';
 import './globals.css';
 import { weddingConfig } from '@/lib/wedding-config';
 
@@ -13,6 +13,20 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const greatVibes = Great_Vibes({
+  variable: '--font-great-vibes',
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+});
+
+const nautigal = The_Nautigal({
+  variable: '--font-nautigal',
+  subsets: ['latin'],
+  weight: ['400', '700'],
   display: 'swap',
 });
 
@@ -37,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} ${nautigal.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-slate-900">{children}</body>
     </html>

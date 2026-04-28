@@ -22,13 +22,13 @@ export default function Hero() {
         <p className="text-xs uppercase tracking-[0.4em] text-white/80 sm:text-sm">
           We&apos;re getting married
         </p>
-        <h1 className="text-5xl font-light leading-tight tracking-tight sm:text-7xl lg:text-8xl">
+        <h1 className="font-script text-7xl leading-none tracking-normal sm:text-8xl lg:text-9xl">
           {partner1}
-          <span className="mx-3 inline-block text-white/70 sm:mx-5">&</span>
+          <span className="mx-3 inline-block text-white/80 sm:mx-5">&</span>
           {partner2}
         </h1>
         <div className="h-px w-24 bg-white/40" />
-        <p className="text-lg font-light tracking-wide sm:text-xl">
+        <p className="font-nautigal text-3xl tracking-wide sm:text-4xl">
           {dateLabel}
         </p>
         <div className="mt-2">
