@@ -13,5 +13,5 @@ export const weddingConfig = {
   ] as { time: string; label: string; sublabel?: string }[],
   dressCode:
     'Semi-formal attire is requested. Please feel free to join us in any colors or tones you are most comfortable with.',
-  rsvpDeadline: '2026-05-15',
+  rsvpDeadline: '2026-05-12',
 };

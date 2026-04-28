@@ -19,7 +19,7 @@ export default function HomePage() {
         </section>
       </main>
       <footer className="border-t border-turquoise-100 bg-turquoise-50/40 px-6 py-10 text-center text-sm text-slate-500">
-        <p className="text-lg font-light tracking-wide text-turquoise-900">
+        <p className="font-display text-lg tracking-wide text-turquoise-900">
           {partner1} &amp; {partner2}
         </p>
         <p className="mt-2">{year} · Made with love</p>

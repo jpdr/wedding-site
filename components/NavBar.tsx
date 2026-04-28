@@ -10,7 +10,7 @@ export default function NavBar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <Link
           href="/"
-          className="text-xl font-medium tracking-wide text-turquoise-900"
+          className="font-display text-xl tracking-wide text-turquoise-900"
         >
           {initials}
         </Link>

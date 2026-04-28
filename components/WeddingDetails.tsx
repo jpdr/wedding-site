@@ -36,13 +36,13 @@ export default function WeddingDetails() {
           <p className="text-xs uppercase tracking-[0.2em] text-turquoise-700">
             Date
           </p>
-          <p className="mt-3 text-2xl text-turquoise-900">{dateLabel}</p>
+          <p className="mt-3 font-display text-2xl text-turquoise-900">{dateLabel}</p>
         </div>
         <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-turquoise-100">
           <p className="text-xs uppercase tracking-[0.2em] text-turquoise-700">
             Venue
           </p>
-          <p className="mt-3 text-2xl text-turquoise-900">{venue.name}</p>
+          <p className="mt-3 font-display text-2xl text-turquoise-900">{venue.name}</p>
           <p className="mt-2 text-sm text-slate-600">{venue.address}</p>
         </div>
         <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-turquoise-100">
@@ -66,7 +66,7 @@ export default function WeddingDetails() {
               className="flex items-start justify-between gap-4 py-4"
             >
               <div>
-                <p className="text-xl text-turquoise-900">{item.label}</p>
+                <p className="font-display text-xl text-turquoise-900">{item.label}</p>
                 {item.sublabel && (
                   <p className="mt-1 text-sm text-slate-500">{item.sublabel}</p>
                 )}
