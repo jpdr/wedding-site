@@ -67,7 +67,7 @@ export default function RsvpForm() {
         <div className="mx-auto mt-6 h-px w-16 bg-turquoise-500" />
         {deadline && (
           <p className="mt-6 text-sm text-slate-600">
-            Kindly respond by{' '}
+            Kindly respond on or before{' '}
             <span className="font-medium text-turquoise-800">{deadline}</span>
           </p>
         )}
