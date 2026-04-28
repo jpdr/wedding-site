@@ -3,7 +3,7 @@
 @theme {
   --font-sans: var(--ff-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: var(--ff-playfair), ui-serif, Georgia, "Times New Roman", serif;
-  --font-script: var(--ff-nautigal), "Brush Script MT", cursive;
+  --font-script: "The Nautigal", "Brush Script MT", cursive;
   --font-pt-serif: var(--ff-pt-serif), ui-serif, Georgia, "Times New Roman", serif;
 
   --color-turquoise-50: #e6f5f4;
@@ -34,7 +34,9 @@ body {
   font-family: var(--font-sans);
 }
 
-:where(h1, h2, h3, h4) {
-  font-family: var(--font-display);
-  letter-spacing: -0.01em;
+@layer base {
+  :where(h1, h2, h3, h4) {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
 }

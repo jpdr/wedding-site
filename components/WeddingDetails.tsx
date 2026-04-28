@@ -26,7 +26,7 @@ export default function WeddingDetails() {
           The Details
         </p>
         <h2 className="mt-3 text-4xl font-light text-turquoise-900 sm:text-5xl">
-          When &amp; Where
+          When <span className="font-script">&amp;</span> Where
         </h2>
         <div className="mx-auto mt-6 h-px w-16 bg-turquoise-500" />
       </div>

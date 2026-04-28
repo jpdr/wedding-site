@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display, The_Nautigal, PT_Serif } from 'next/font/google';
+import { Inter, Playfair_Display, PT_Serif } from 'next/font/google';
 import './globals.css';
 import { weddingConfig } from '@/lib/wedding-config';
 
@@ -13,13 +13,6 @@ const playfair = Playfair_Display({
   variable: '--ff-playfair',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const nautigal = The_Nautigal({
-  variable: '--ff-nautigal',
-  subsets: ['latin'],
-  weight: ['400'],
   display: 'swap',
 });
 
@@ -52,8 +45,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${nautigal.variable} ${ptSerif.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${ptSerif.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400&display=swap"
+        />
+      </head>
       <body className="min-h-full bg-white text-slate-900">{children}</body>
     </html>
   );
