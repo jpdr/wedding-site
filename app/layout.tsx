@@ -4,27 +4,27 @@ import './globals.css';
 import { weddingConfig } from '@/lib/wedding-config';
 
 const inter = Inter({
-  variable: '--font-inter',
+  variable: '--ff-inter',
   subsets: ['latin'],
   display: 'swap',
 });
 
 const playfair = Playfair_Display({
-  variable: '--font-playfair',
+  variable: '--ff-playfair',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
 const nautigal = The_Nautigal({
-  variable: '--font-nautigal',
+  variable: '--ff-nautigal',
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
   display: 'swap',
 });
 
 const ptSerif = PT_Serif({
-  variable: '--font-pt-serif',
+  variable: '--ff-pt-serif',
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
