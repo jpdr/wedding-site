@@ -4,10 +4,22 @@ import { useState, useTransition } from 'react';
 import SectionContainer from './SectionContainer';
 import RsvpSuccess from './RsvpSuccess';
 import { submitRsvpAction } from '@/lib/actions/rsvp';
+import { weddingConfig } from '@/lib/wedding-config';
 
 type Attending = 'yes' | 'no' | '';
 
+function formatDeadline(iso: string): string | null {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  });
+}
+
 export default function RsvpForm() {
+  const deadline = formatDeadline(weddingConfig.rsvpDeadline);
   const [name, setName] = useState('');
   const [attending, setAttending] = useState<Attending>('');
   const [guestCount, setGuestCount] = useState<1 | 2>(1);
@@ -53,6 +65,12 @@ export default function RsvpForm() {
           Will you join us?
         </h2>
         <div className="mx-auto mt-6 h-px w-16 bg-teal-400" />
+        {deadline && (
+          <p className="mt-6 text-sm text-slate-600">
+            Kindly respond by{' '}
+            <span className="font-medium text-emerald-800">{deadline}</span>
+          </p>
+        )}
       </div>
 
       <div className="mx-auto mt-12 max-w-xl">
