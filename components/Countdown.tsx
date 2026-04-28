@@ -53,7 +53,7 @@ export default function Countdown() {
 
   if (parts.done) {
     return (
-      <div className="inline-flex items-center rounded-full bg-white/30 px-6 py-3 font-serif text-2xl text-white backdrop-blur">
+      <div className="inline-flex items-center rounded-full bg-white/30 px-6 py-3 text-2xl text-white backdrop-blur">
         Today is the day!
       </div>
     );
@@ -71,9 +71,9 @@ export default function Countdown() {
       {items.map((item) => (
         <div
           key={item.label}
-          className="min-w-[72px] rounded-2xl bg-white/20 px-4 py-3 text-center text-white backdrop-blur-md sm:min-w-[88px]"
+          className="min-w-[72px] rounded-2xl bg-white/15 px-4 py-3 text-center text-white ring-1 ring-white/20 backdrop-blur-md sm:min-w-[88px]"
         >
-          <div className="font-serif text-3xl font-light leading-none sm:text-4xl">
+          <div className="text-3xl font-light leading-none sm:text-4xl">
             {item.value.toString().padStart(2, '0')}
           </div>
           <div className="mt-1 text-[10px] uppercase tracking-[0.2em] sm:text-xs">

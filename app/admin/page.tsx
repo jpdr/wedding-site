@@ -18,14 +18,14 @@ export default async function AdminPage() {
   const rows = await getRsvps();
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-emerald-50/40 to-white px-6 py-12 lg:px-10">
+    <main className="min-h-screen bg-gradient-to-b from-turquoise-50/40 to-white px-6 py-12 lg:px-10">
       <div className="mx-auto max-w-6xl">
         <header className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-teal-600">
+            <p className="text-xs uppercase tracking-[0.3em] text-turquoise-700">
               Admin
             </p>
-            <h1 className="mt-2 font-serif text-4xl font-light text-emerald-900">
+            <h1 className="mt-2 text-4xl font-light text-turquoise-900">
               RSVP Dashboard
             </h1>
           </div>

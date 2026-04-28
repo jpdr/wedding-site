@@ -5,7 +5,7 @@ export default function VenueMap() {
 
   if (!url) {
     return (
-      <div className="flex aspect-video w-full items-center justify-center rounded-3xl border border-dashed border-teal-300 bg-teal-50 text-sm text-teal-700">
+      <div className="flex aspect-video w-full items-center justify-center rounded-3xl border border-dashed border-turquoise-300 bg-turquoise-50 text-sm text-turquoise-700">
         Map coming soon
       </div>
     );

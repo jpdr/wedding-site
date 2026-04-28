@@ -85,10 +85,10 @@ export default function AdminTable({ rows }: AdminTableProps) {
         <Stat label="Guest Count" value={totals.guests} accent />
       </div>
 
-      <div className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-emerald-100">
+      <div className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-turquoise-100">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="bg-emerald-50 text-xs uppercase tracking-wider text-emerald-900">
+            <thead className="bg-turquoise-50 text-xs uppercase tracking-wider text-turquoise-900">
               <tr>
                 <Th onClick={() => toggle('name')} sort={ariaSort('name')}>
                   Name{arrow('name')}
@@ -105,7 +105,7 @@ export default function AdminTable({ rows }: AdminTableProps) {
                 </Th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-emerald-100">
+            <tbody className="divide-y divide-turquoise-100">
               {sorted.length === 0 ? (
                 <tr>
                   <td className="px-4 py-12 text-center text-slate-500" colSpan={5}>
@@ -114,13 +114,13 @@ export default function AdminTable({ rows }: AdminTableProps) {
                 </tr>
               ) : (
                 sorted.map((row) => (
-                  <tr key={row.id} className="hover:bg-emerald-50/50">
+                  <tr key={row.id} className="hover:bg-turquoise-50/50">
                     <td className="px-4 py-3 font-medium text-slate-900">
                       {row.name}
                     </td>
                     <td className="px-4 py-3">
                       {row.attending ? (
-                        <span className="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-medium text-emerald-800">
+                        <span className="inline-flex items-center rounded-full bg-turquoise-100 px-2.5 py-1 text-xs font-medium text-turquoise-800">
                           Yes
                         </span>
                       ) : (
@@ -160,18 +160,18 @@ function Stat({
     <div
       className={`rounded-2xl p-4 ring-1 ${
         accent
-          ? 'bg-gradient-to-br from-teal-500 to-emerald-600 text-white ring-emerald-400'
-          : 'bg-white text-slate-900 ring-emerald-100'
+          ? 'bg-turquoise-700 text-white ring-turquoise-600'
+          : 'bg-white text-slate-900 ring-turquoise-100'
       }`}
     >
       <div
         className={`text-xs uppercase tracking-[0.2em] ${
-          accent ? 'text-white/80' : 'text-teal-600'
+          accent ? 'text-white/80' : 'text-turquoise-700'
         }`}
       >
         {label}
       </div>
-      <div className="mt-2 font-serif text-3xl font-light">{value}</div>
+      <div className="mt-2 text-3xl font-light">{value}</div>
     </div>
   );
 }
@@ -188,7 +188,7 @@ function Th({
   return (
     <th
       aria-sort={sort}
-      className="cursor-pointer select-none px-4 py-3 transition-colors hover:bg-emerald-100"
+      className="cursor-pointer select-none px-4 py-3 transition-colors hover:bg-turquoise-100"
       onClick={onClick}
     >
       {children}

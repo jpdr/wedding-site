@@ -20,20 +20,18 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
   const { error } = await searchParams;
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-teal-100 via-emerald-100 to-emerald-200 px-6">
-      <div className="w-full max-w-sm rounded-3xl bg-white p-8 shadow-xl ring-1 ring-emerald-100">
-        <p className="text-xs uppercase tracking-[0.3em] text-teal-600">
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-turquoise-700 via-turquoise-800 to-turquoise-900 px-6">
+      <div className="w-full max-w-sm rounded-3xl bg-white p-8 shadow-xl ring-1 ring-turquoise-100">
+        <p className="text-xs uppercase tracking-[0.3em] text-turquoise-700">
           Admin
         </p>
-        <h1 className="mt-2 font-serif text-3xl font-light text-emerald-900">
-          Sign in
-        </h1>
+        <h1 className="mt-2 text-3xl font-light text-turquoise-900">Sign in</h1>
 
         <form action={loginAction} className="mt-8 space-y-5">
           <div>
             <label
               htmlFor="password"
-              className="block text-xs font-medium uppercase tracking-[0.2em] text-teal-700"
+              className="block text-xs font-medium uppercase tracking-[0.2em] text-turquoise-700"
             >
               Password
             </label>
@@ -43,7 +41,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               type="password"
               required
               autoFocus
-              className="mt-2 w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-200"
+              className="mt-2 w-full rounded-xl border border-turquoise-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-turquoise-500 focus:ring-2 focus:ring-turquoise-200"
             />
           </div>
 
@@ -55,7 +53,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
           <button
             type="submit"
-            className="w-full rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-md transition-opacity hover:opacity-90"
+            className="w-full rounded-xl bg-turquoise-700 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-md transition-colors hover:bg-turquoise-800"
           >
             Sign in
           </button>

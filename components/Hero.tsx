@@ -16,13 +16,13 @@ export default function Hero() {
   const dateLabel = formatWeddingDate(weddingConfig.weddingDate);
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-teal-400 via-emerald-500 to-emerald-700 px-6 py-24 text-center text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.18),transparent_60%)]" />
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-turquoise-700 via-turquoise-800 to-turquoise-900 px-6 py-24 text-center text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_60%)]" />
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-10">
         <p className="text-xs uppercase tracking-[0.4em] text-white/80 sm:text-sm">
           We&apos;re getting married
         </p>
-        <h1 className="font-serif text-5xl font-light leading-tight tracking-tight sm:text-7xl lg:text-8xl">
+        <h1 className="text-5xl font-light leading-tight tracking-tight sm:text-7xl lg:text-8xl">
           {partner1}
           <span className="mx-3 inline-block text-white/70 sm:mx-5">&</span>
           {partner2}
@@ -34,12 +34,6 @@ export default function Hero() {
         <div className="mt-2">
           <Countdown />
         </div>
-        <a
-          href="#story"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-white/70 transition-colors hover:text-white"
-        >
-          Scroll <span aria-hidden="true">↓</span>
-        </a>
       </div>
     </section>
   );

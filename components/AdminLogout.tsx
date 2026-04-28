@@ -5,7 +5,7 @@ export default function AdminLogout() {
     <form action={logoutAction}>
       <button
         type="submit"
-        className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-medium text-emerald-800 shadow-sm transition-colors hover:bg-emerald-50"
+        className="rounded-full border border-turquoise-200 bg-white px-4 py-2 text-sm font-medium text-turquoise-800 shadow-sm transition-colors hover:bg-turquoise-50"
       >
         Sign out
       </button>

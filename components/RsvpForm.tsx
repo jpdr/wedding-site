@@ -60,15 +60,15 @@ export default function RsvpForm() {
   return (
     <SectionContainer className="bg-white">
       <div className="text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-teal-600">RSVP</p>
-        <h2 className="mt-3 font-serif text-4xl font-light text-emerald-900 sm:text-5xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-turquoise-700">RSVP</p>
+        <h2 className="mt-3 text-4xl font-light text-turquoise-900 sm:text-5xl">
           Will you join us?
         </h2>
-        <div className="mx-auto mt-6 h-px w-16 bg-teal-400" />
+        <div className="mx-auto mt-6 h-px w-16 bg-turquoise-500" />
         {deadline && (
           <p className="mt-6 text-sm text-slate-600">
             Kindly respond by{' '}
-            <span className="font-medium text-emerald-800">{deadline}</span>
+            <span className="font-medium text-turquoise-800">{deadline}</span>
           </p>
         )}
       </div>
@@ -79,13 +79,13 @@ export default function RsvpForm() {
         ) : (
           <form
             onSubmit={onSubmit}
-            className="space-y-6 rounded-3xl bg-emerald-50/40 p-8 ring-1 ring-emerald-100 sm:p-10"
+            className="space-y-6 rounded-3xl bg-turquoise-50/40 p-8 ring-1 ring-turquoise-100 sm:p-10"
             noValidate
           >
             <div>
               <label
                 htmlFor="rsvp-name"
-                className="block text-xs font-medium uppercase tracking-[0.2em] text-teal-700"
+                className="block text-xs font-medium uppercase tracking-[0.2em] text-turquoise-700"
               >
                 Your Name
               </label>
@@ -96,21 +96,21 @@ export default function RsvpForm() {
                 onChange={(e) => setName(e.target.value)}
                 maxLength={100}
                 required
-                className="mt-2 w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-200"
+                className="mt-2 w-full rounded-xl border border-turquoise-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-turquoise-500 focus:ring-2 focus:ring-turquoise-200"
                 placeholder="Full name"
               />
             </div>
 
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-teal-700">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-turquoise-700">
                 Attending?
               </p>
               <div className="mt-3 grid grid-cols-2 gap-3">
                 <label
                   className={`flex cursor-pointer items-center justify-center rounded-xl border px-4 py-3 text-sm font-medium transition-colors ${
                     attending === 'yes'
-                      ? 'border-teal-500 bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-sm'
-                      : 'border-emerald-200 bg-white text-slate-700 hover:border-teal-300'
+                      ? 'border-turquoise-700 bg-turquoise-700 text-white shadow-sm'
+                      : 'border-turquoise-200 bg-white text-slate-700 hover:border-turquoise-400'
                   }`}
                 >
                   <input
@@ -126,8 +126,8 @@ export default function RsvpForm() {
                 <label
                   className={`flex cursor-pointer items-center justify-center rounded-xl border px-4 py-3 text-sm font-medium transition-colors ${
                     attending === 'no'
-                      ? 'border-teal-500 bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-sm'
-                      : 'border-emerald-200 bg-white text-slate-700 hover:border-teal-300'
+                      ? 'border-turquoise-700 bg-turquoise-700 text-white shadow-sm'
+                      : 'border-turquoise-200 bg-white text-slate-700 hover:border-turquoise-400'
                   }`}
                 >
                   <input
@@ -147,7 +147,7 @@ export default function RsvpForm() {
               <div>
                 <label
                   htmlFor="rsvp-guests"
-                  className="block text-xs font-medium uppercase tracking-[0.2em] text-teal-700"
+                  className="block text-xs font-medium uppercase tracking-[0.2em] text-turquoise-700"
                 >
                   Number of guests
                 </label>
@@ -155,7 +155,7 @@ export default function RsvpForm() {
                   id="rsvp-guests"
                   value={guestCount}
                   onChange={(e) => setGuestCount(Number(e.target.value) as 1 | 2)}
-                  className="mt-2 w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors focus:border-teal-400 focus:ring-2 focus:ring-teal-200"
+                  className="mt-2 w-full rounded-xl border border-turquoise-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors focus:border-turquoise-500 focus:ring-2 focus:ring-turquoise-200"
                 >
                   <option value={1}>Just me</option>
                   <option value={2}>Me and a guest (2)</option>
@@ -166,7 +166,7 @@ export default function RsvpForm() {
             <div>
               <label
                 htmlFor="rsvp-message"
-                className="block text-xs font-medium uppercase tracking-[0.2em] text-teal-700"
+                className="block text-xs font-medium uppercase tracking-[0.2em] text-turquoise-700"
               >
                 Message <span className="lowercase text-slate-400">(optional)</span>
               </label>
@@ -176,7 +176,7 @@ export default function RsvpForm() {
                 onChange={(e) => setMessage(e.target.value)}
                 maxLength={1000}
                 rows={4}
-                className="mt-2 w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-200"
+                className="mt-2 w-full rounded-xl border border-turquoise-200 bg-white px-4 py-3 text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-turquoise-500 focus:ring-2 focus:ring-turquoise-200"
                 placeholder="Share a note for the couple..."
               />
             </div>
@@ -190,7 +190,7 @@ export default function RsvpForm() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-md transition-all hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-xl bg-turquoise-700 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-md transition-all hover:bg-turquoise-800 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isPending ? 'Sending...' : 'Send RSVP'}
             </button>

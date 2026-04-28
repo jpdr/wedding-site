@@ -2,18 +2,17 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-serif: var(--font-cormorant), ui-serif, Georgia, "Times New Roman", serif;
 
-  --color-turquoise-50: #eefbfa;
-  --color-turquoise-100: #d3f5f1;
-  --color-turquoise-200: #aaeae3;
-  --color-turquoise-300: #74dad0;
-  --color-turquoise-400: #3fc4b9;
-  --color-turquoise-500: #1faea4;
-  --color-turquoise-600: #168d86;
-  --color-turquoise-700: #14716c;
-  --color-turquoise-800: #155a57;
-  --color-turquoise-900: #144a48;
+  --color-turquoise-50: #e6f5f4;
+  --color-turquoise-100: #c2e6e3;
+  --color-turquoise-200: #8ed1cc;
+  --color-turquoise-300: #4fb5ad;
+  --color-turquoise-400: #2a9892;
+  --color-turquoise-500: #137d78;
+  --color-turquoise-600: #0e6863;
+  --color-turquoise-700: #0b5450;
+  --color-turquoise-800: #094442;
+  --color-turquoise-900: #07332f;
 }
 
 :root {
@@ -30,8 +29,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-serif);
 }
