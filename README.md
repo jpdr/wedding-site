@@ -33,7 +33,6 @@ A personal wedding RSVP site built with Next.js 15, Tailwind, and Neon Postgres.
 | `DATABASE_URL` | Neon Postgres connection string (with `?sslmode=require`). |
 | `ADMIN_PASSWORD` | Password for `/admin/login`. |
 | `SESSION_SECRET` | 32+ char random hex used to sign the admin session cookie. Generate with `openssl rand -hex 32`. |
-| `NEXT_PUBLIC_VENUE_MAP_EMBED` | Optional. Google Maps embed iframe `src` URL. Leave empty to show a placeholder. |
 
 ## Database setup (Neon)
 
@@ -45,7 +44,7 @@ A personal wedding RSVP site built with Next.js 15, Tailwind, and Neon Postgres.
 
 1. Push this repo to GitHub.
 2. In Vercel, **Add New Project** → import the repository.
-3. Add the four environment variables (`DATABASE_URL`, `ADMIN_PASSWORD`, `SESSION_SECRET`, `NEXT_PUBLIC_VENUE_MAP_EMBED`) under **Project Settings → Environment Variables** for the Production environment.
+3. Add the three environment variables (`DATABASE_URL`, `ADMIN_PASSWORD`, `SESSION_SECRET`) under **Project Settings → Environment Variables** for the Production environment.
 4. Deploy. The build does not need any of the env vars set — the DB client and session secret lazy-init at request time.
 
 ## Filling in your wedding details
@@ -59,8 +58,6 @@ All copy lives in `lib/wedding-config.ts`. Edit:
 - `dressCode`
 - `story.headline` / `story.body`
 - `rsvpDeadline`
-
-Drop hero / story photos into `public/photos/` as `hero.jpg` and `story.jpg` (or update the paths in the config).
 
 ## Admin dashboard
 

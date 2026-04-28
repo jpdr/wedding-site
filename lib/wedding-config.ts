@@ -1,22 +1,21 @@
 export const weddingConfig = {
-  coupleNames: { partner1: 'TODO Partner 1', partner2: 'TODO Partner 2' },
-  weddingDate: '2026-12-31T16:00:00+08:00',
+  coupleNames: { partner1: 'Joshua', partner2: 'Ella' },
+  weddingDate: '2026-05-26T11:00:00+08:00',
   venue: {
-    name: 'TODO Venue Name',
-    address: 'TODO Venue Address',
-    mapEmbedUrl: process.env.NEXT_PUBLIC_VENUE_MAP_EMBED ?? '',
+    name: 'Girasol Tagaytay',
+    address: 'Aguinaldo (Tagaytay-Nasugbu) Highway, Alfonso, Cavite 4123',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.8494460857974!2d120.8875295!3d14.086063300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd9dc7308331b9%3A0x7da8c2e788ec046d!2sGirasol%20Tagaytay!5e0!3m2!1sen!2sph!4v1777383544131!5m2!1sen!2sph',
   },
   schedule: [
-    { time: '3:00 PM', label: 'Ceremony' },
-    { time: '4:30 PM', label: 'Cocktail Hour' },
-    { time: '6:00 PM', label: 'Reception' },
+    { time: '11:00 AM', label: 'Civil Wedding (limited guests only)' },
+    { time: '1:00 PM', label: 'Wedding Reception' },
   ],
-  dressCode: 'TODO: e.g. Semi-formal — Turquoise & Emerald accents welcome',
+  dressCode:
+    'Semi-formal attire is requested. Please feel free to join us in any colors or tones you are most comfortable with.',
   story: {
     headline: 'How We Met',
     body: 'TODO: write your story here. This is the placeholder text — replace it before launch.',
-    photo: '/photos/story.jpg',
   },
-  heroPhoto: '/photos/hero.jpg',
-  rsvpDeadline: '2026-XX-XX',
+  rsvpDeadline: '2026-05-15',
 };
