@@ -4,12 +4,13 @@ import { weddingConfig } from '@/lib/wedding-config';
 
 function formatWeddingDate(iso: string): string {
   const d = new Date(iso);
-  return d.toLocaleDateString('en-US', {
-    weekday: 'long',
+  const datePart = d.toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   });
+  const weekday = d.toLocaleDateString('en-US', { weekday: 'long' });
+  return `${datePart}, ${weekday}`;
 }
 
 export default function WeddingDetails() {
