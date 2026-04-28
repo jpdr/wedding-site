@@ -28,7 +28,7 @@ export default function Hero() {
           {partner2}
         </h1>
         <div className="h-px w-24 bg-white/40" />
-        <p className="font-nautigal text-3xl tracking-wide sm:text-4xl">
+        <p className="font-pt-serif text-lg tracking-wide sm:text-xl">
           {dateLabel}
         </p>
         <div className="mt-2">
